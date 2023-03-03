@@ -17,7 +17,7 @@ const Header = () => {
       <div className="absolute bottom-5 px-3">
         <h1 className="text-3xl font-semibold text-white">TodoApp👋</h1>
         <p className="text-sm text-white mt-1">
-          Helps you manage all of your tasks.
+          Helps to manage all of your tasks.
         </p>
       </div>
     </header>
