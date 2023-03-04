@@ -19,7 +19,7 @@ import {
 } from "@/lib/reducer";
 
 // import type
-import { Props, Todos } from "./_app";
+import { Props } from "./_app";
 
 const Home = ({ page }: Props) => {
   const [updateTodos] = useUpdateTodosMutation();
@@ -33,14 +33,14 @@ const Home = ({ page }: Props) => {
   const { data: todos } = useGetTodosQuery(startData);
 
   const nextPage = (): boolean | void => {
-    if (currentPage == 20) {
+    if (currentPage === 20) {
       return false;
     } else {
       setStartData(startData + 10);
       setCurrentPage(currentPage + 1);
     }
   };
-  const prevPage = (): boolean | void => {
+  const prevPage = (): void => {
     if (startData > 0) {
       setStartData(startData - 10);
       setCurrentPage(currentPage - 1);
